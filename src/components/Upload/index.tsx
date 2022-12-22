@@ -97,7 +97,7 @@ const UploadMultilField = ({
       >
         {!_limit || fileList.length < _limit ? children : ""}
       </Upload>
-      <Modal visible={previewVisible} footer={null} onCancel={handleCancel}>
+      <Modal open={previewVisible} footer={null} onCancel={handleCancel}>
         <img alt="example" style={{ width: "100%" }} src={previewImg} />
       </Modal>
     </div>

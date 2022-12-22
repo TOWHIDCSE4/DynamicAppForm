@@ -31,7 +31,7 @@ interface DatePickerProps {
   className?: string;
   allowClear?: boolean;
   checkAdult?: boolean;
-  onChangeField?: () => void
+  onChangeField?: () => void;
 }
 const DatePickerControl: FC<DatePickerProps> = ({
   name,
@@ -44,7 +44,7 @@ const DatePickerControl: FC<DatePickerProps> = ({
   className = "",
   allowClear = false,
   checkAdult = false,
-  onChangeField
+  onChangeField,
 }) => {
   let errMsg = errors?.[name]?.message;
   return (
@@ -65,9 +65,10 @@ const DatePickerControl: FC<DatePickerProps> = ({
             placeholder={placeholder}
             placement={"bottomLeft"}
             format={format}
-            onChange={(e)=>{
-              onChangeField && onChangeField()
-              field.onChange(e)
+            style={{ width: "100%" }}
+            onChange={(e) => {
+              onChangeField && onChangeField();
+              field.onChange(e);
             }}
             // disabledDate={checkAdult ? disabledForAduldDate : disabledDate}
           />

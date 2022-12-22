@@ -1,5 +1,5 @@
 import React, { FC, useState, useEffect } from "react";
-import { Input, InputNumber, DatePicker, FieldLabel, Select, ImageUploader } from "@src/components/controls";
+import { Input, InputNumber, DatePicker, FieldLabel, Select, ImageUploader, DragDrop } from "@src/components/controls";
 import { useFormContext } from "react-hook-form";
 import { Row, Col } from "antd";
 interface CommonFormProps {
@@ -17,7 +17,7 @@ export const CommonForm: FC<CommonFormProps> = ({ formField }) => {
     return (
       <div>
         <FieldLabel name={fieldName} label={label} />
-        <Input control={control} name={fieldName} type={inputType} />
+        <Input control={control} name={fieldName} type={inputType} size="large" />
       </div>
     );
   } else if (inputType === "number") {
@@ -34,33 +34,21 @@ export const CommonForm: FC<CommonFormProps> = ({ formField }) => {
         <Select control={control} name={fieldName} options={options} />
       </div>
     );
+  } else if (inputType === "date") {
+    return (
+      <div>
+        <FieldLabel name={fieldName} label={label} />
+        <DatePicker control={control} name={fieldName} />
+      </div>
+    );
+  } else if (inputType === "file") {
+    return (
+      <div>
+        <FieldLabel name={fieldName} label={label} />
+        <DragDrop control={control} name={fieldName} onRemoveFile={() => {}} />
+      </div>
+    );
   } else {
     return <></>;
   }
 };
-
-// return (
-//   <Row>
-//     <Col className="gutter-row">
-//       <FieldLabel name={fieldName} label={label} />
-//       <Input control={control} name={fieldName} type={inputType} />
-//     </Col>
-//   </Row>
-// );
-// if (Col) {
-//   return (
-//     <Row>
-//       <Col className="gutter-row">
-//         <FieldLabel name={fieldName} label={label} />
-//         <Input control={control} name={fieldName} type={inputType} />
-//       </Col>
-//     </Row>
-//   );
-// } else {
-//   return (
-//     <div>
-//       <FieldLabel name={fieldName} label={label} />
-//       <Input control={control} name={fieldName} type={inputType} />
-//     </div>
-//   );
-// }

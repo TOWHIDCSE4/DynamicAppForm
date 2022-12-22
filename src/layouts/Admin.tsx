@@ -76,7 +76,7 @@ const Admin = (props: any) => {
               closable={false}
               destroyOnClose={true}
               onClose={() => onCollapseChange(false)}
-              visible={collapsed}
+              open={collapsed}
               placement="left"
               width={256}
               bodyStyle={{

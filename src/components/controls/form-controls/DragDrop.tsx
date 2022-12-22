@@ -9,7 +9,7 @@ interface DragDropProps {
   errors?: any;
   msg?: string;
   fileType?: string;
-  acceptFileFormat: any;
+  acceptFileFormat?: any;
   fileTypeLabelText?: string;
   fileSizeLabelText?: string;
   onRemoveFile: () => void;
@@ -47,6 +47,7 @@ export const DragDrop: FC<DragDropProps> = ({
             onRemove={(file) => {
               onRemoveFile();
             }}
+            style={{padding:"20px 0px"}}
           >
             <div className="flex justify-center mt-1">
               <AiOutlineCloudUpload className="text-3xl text-sky-600" />

@@ -7,6 +7,7 @@ import "@src/less/base/vars.less";
 import "@src/less/default.less";
 import "@src/less/login.less";
 import "@src/less/admin.less";
+import "@src/less/pages/index.less";
 import Router from "next/router";
 import NProgress from "nprogress"; //nprogress module
 import "nprogress/nprogress.css"; //styles of nprogress
