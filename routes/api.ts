@@ -19,9 +19,18 @@ Route.group(() => {
   Route.get("/routes", "RouteController.index").name('routes.index')
   // ---------------------------------- End Route Routes -----------------------------------//
 
-  // ---------------------------------- Route DocumentController ---------------------------------------//
+  // ---------------------------------- Route Document Routes ---------------------------------------//
   Route.get("/documents", "DocumentController.index").name('documents.index')
-  // ---------------------------------- End Route DocumentController -----------------------------------//
+  // ---------------------------------- End Route Document Routes -----------------------------------//
+
+  // ---------------------------------- Route DocumentTemplate Routes ---------------------------------------//
+  Route.get("/document_templates", "DocumentTemplateController.index").name('document_templates.index')
+  Route.post("/document_templates", "DocumentTemplateController.store").name('document_templates.store')
+  Route.put("/document_templates", "DocumentTemplateController.update").name('document_templates.update')
+// Route.group(() => {
+
+// })
+  // ---------------------------------- End Route Document Routes -----------------------------------//
 
   Route.group(() => {
     Route.post("/changePassword", "AuthController.changePassword").name("auth.changePassword")
