@@ -1,60 +1,58 @@
 {
-  "schema": [
-  {
-    "fieldName": "firstName",
-    "inputType": "text",
-    "label": "First Name",
-    "defaultValue": "",
-    "position": 1,
-    "Col": { "xs": 2, "lg": 3},
-    "validation": []
-  },
-  {
-    "fieldName": "lastName",
-    "inputType": "text",
-    "label": "Last Name",
-    "position": 2,
-    "Col": { "xs": 2, "lg": 3},
-    "defaultValue": "",
-    "validation": []
-  },
-  {
-    "fieldName": "lastName",
-    "inputType": "text",
-    "label": "Last Name",
-    "defaultValue": "",
-    "validation": []
-  },
+  "schema": {
+    "personalDetails": {
+      "title": "Personal Details",
+      "fields": [
+        {
+          "fieldName": "firstName",
+          "inputType": "text",
+          "label": "First Name",
+          "defaultValue": "",
+          "position": { "row": 1, "col": 1 },
+          "Col": { "xs": 2, "lg": 3 },
+          "validation": []
+        },
+        {
+          "fieldName": "lastName",
+          "inputType": "text",
+          "label": "Last Name",
+          "position": { "row": 1, "col": 2 },
+          "Col": { "xs": 2, "lg": 3 },
+          "defaultValue": "",
+          "validation": []
+        },
+        {
+          "fieldName": "email",
+          "inputType": "text",
+          "label": "Email Address",
+          "defaultValue": "",
+          "position": { "row": 2, "col": 1 },
+          "validation": []
+        },
 
-  {
-    "fieldName": "phoneNumber",
-    "inputType": "number",
-    "label": "Phone",
-    "defaultValue": 84,
-    "validation": []
-  },
-  {
-    "fieldName": "age",
-    "inputType": "number",
-    "label": "Age",
-    "defaultValue": 18,
-    "validation": []
-  },
-  {
-    "fieldName": "language",
-    "inputType": "select",
-    "label": "Language",
-    "validation": [],
-    "options": [
-      { "value": "english", "label": "English" },
-      { "value": "french", "label": "French" }
-    ],
-    "defaultValue": "english"
-  },
-  {
-    "fieldName": "address",
-    "inputType": "text",
-    "label": "Address",
-    "defaultValue": ""
-  }]
+        {
+          "fieldName": "phoneNumber",
+          "inputType": "number",
+          "label": "Phone Number",
+          "defaultValue": 84,
+          "position": { "row": 2, "col": 2 },
+          "validation": []
+        },
+        {
+          "fieldName": "dateofBirth",
+          "inputType": "date",
+          "label": "Date of Birth",
+          "position": { "row": 3, "col": 1 },
+          "validation": []
+        },
+        {
+          "fieldName": "image",
+          "inputType": "file",
+          "label": "Face Photo",
+          "position": { "row": 1, "col": 3 },
+          "validation": []
+        }
+      ]
+    }
+  }
 }
