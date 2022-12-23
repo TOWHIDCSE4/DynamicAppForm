@@ -7,21 +7,16 @@
           "fieldName": "firstName",
           "inputType": "text",
           "label": "First Name",
+          "position": 1,
           "defaultValue": "",
           "Col": { "xs": 2, "lg": 3 },
           "validation": []
         },
-        {
-          "fieldName": "lastName",
-          "inputType": "text",
-          "label": "Last Name",
-          "Col": { "xs": 2, "lg": 3 },
-          "defaultValue": "",
-          "validation": []
-        },
+
         {
           "fieldName": "image",
           "inputType": "file",
+          "position": 3,
           "label": "Face Photo",
           "validation": []
         },
@@ -29,6 +24,7 @@
           "fieldName": "email",
           "inputType": "text",
           "label": "Email Address",
+          "position": 4,
           "defaultValue": "",
           "validation": []
         },
@@ -37,13 +33,24 @@
           "fieldName": "phoneNumber",
           "inputType": "number",
           "label": "Phone Number",
+          "position": 5,
           "defaultValue": 84,
           "validation": []
         },
         {
           "fieldName": "dateofBirth",
           "inputType": "date",
+          "position": 6,
           "label": "Date of Birth",
+          "validation": []
+        },
+        {
+          "fieldName": "lastName",
+          "inputType": "text",
+          "label": "Last Name",
+          "position": 2,
+          "Col": { "xs": 2, "lg": 3 },
+          "defaultValue": "",
           "validation": []
         }
       ]

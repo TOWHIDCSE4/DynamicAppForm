@@ -26,15 +26,15 @@ const DynamicFormPage = () => {
             return (
               <div key={i}>
                 <h2>{fieldValue?.title}</h2>
-                <div className="field-container-one-third">
+                <Row className="field-container-one-third">
                   {fieldValue?.fields.map((field, k) => {
                     return (
-                      <div className={` ${field.inputType === "file"? "field-item-file":"field-item"}`} key={k}>
+                      <Col key={k} xs="field.Col.xs" lg="field.Col.lg" order={field.position}>
                         <CommonForm formField={field} />
-                      </div>
+                      </Col>
                     );
                   })}
-                </div>
+                </Row>
               </div>
             );
           })}
@@ -51,3 +51,5 @@ const DynamicFormPage = () => {
 };
 
 export default DynamicFormPage;
+
+// className={` ${field.inputType === "file"? "field-item-file":"field-item"}`}
